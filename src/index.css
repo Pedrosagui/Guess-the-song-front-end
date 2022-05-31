@@ -1,5 +1,6 @@
 body {
-  background-color: #e4e4e4;
+  background-image: url("../public/backgroundimage.png");
+
 }
 
 div {
@@ -13,8 +14,8 @@ div {
 }
 
 .question {
-  background-color: #0094da;
-  color: white;
+  background-color: #35BC98;
+  color: black;
   padding: 10px;
   min-height: 60px;
   display: flex;
@@ -30,7 +31,7 @@ div {
 }
 
 .congratulations {
-  background-color: #0094da;
+  background-color: #35BC98;
   padding: 20px;
   font-size: 36px;
   color: #fff;
@@ -45,7 +46,7 @@ div {
 .answer {
   width: 48%;
   background: #fff;
-  border: 2px solid #0094da;
+  border: 2px solid #35BC98;
   min-height: 70px;
   cursor: pointer;
   margin-bottom: 30px;
@@ -61,7 +62,7 @@ div {
 
 .answer-letter {
   font-size: 30px;
-  background-color: #0084da;
+  background-color: #35BC98;
   color: #fff;
   width: 70px;
   display: flex;
@@ -95,7 +96,7 @@ div {
 .next-button {
   margin: 0 auto;
   color: #fff;
-  background: #0b0e21;
+  background: #BD2121;
   width: 300px;
   font-size: 18px;
   font-weight: 600;
@@ -106,10 +107,10 @@ div {
 }
 
 .score {
-  background: #fff;
-  color: 000;
+  background: #BD2121;
+  color: #fff;
   font-size: 18px;
-  width: 200px;
+  width: 300px;
   margin: 0 auto;
   font-weight: 600;
   height: 40px;
