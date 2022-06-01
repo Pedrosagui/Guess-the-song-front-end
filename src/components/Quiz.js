@@ -5,8 +5,7 @@ import { QuizContext } from "../contexts/quiz";
 const Quiz = () => {
   const [quizState, dispatch] = useContext(QuizContext);
   const apiUrl =
-    "https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=multiple&encode=url3986";
-
+    "http://localhost:8080/api/quiz/v1/link park";
   useEffect(() => {
     if (quizState.questions.length > 0) {
       return;
@@ -48,6 +47,7 @@ const Quiz = () => {
             {quizState.questions.length}
           </div>
           <Question />
+
           <div
             className="next-button"
             onClick={() => dispatch({ type: "NEXT_QUESTION" })}
