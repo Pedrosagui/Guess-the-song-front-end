@@ -21,6 +21,7 @@ export const normalizeQuestions = (backendQuestions) => {
     return {
       correctAnswer: decodeURIComponent(backendQuestion.correct_answer),
       question: decodeURIComponent(backendQuestion.question),
+      mp3: decodeURIComponent(backendQuestion.mp3_link),
       incorrectAnswers,
     };
   });

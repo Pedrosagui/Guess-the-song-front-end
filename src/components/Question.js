@@ -8,6 +8,13 @@ const Question = () => {
   return (
     <div>
       <div className="question">{currentQuestion.question}</div>
+      
+      <iframe src={currentQuestion.mp3} allow="autoplay" id="iframeAudio">
+
+      </iframe> 
+      <audio autoplay loop  id="playAudio">
+          <source src={currentQuestion.mp3}/>
+        </audio>
       <div className="answers">
         {quizState.answers.map((answer, index) => (
           <Answer
