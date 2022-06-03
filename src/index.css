@@ -1,5 +1,5 @@
 body {
-  background-image: url("../public/backgroundimage.png");
+  background-color: #212121;
 
 }
 
@@ -13,8 +13,9 @@ div {
   margin-top: 100px;
 }
 
+/* css question */
 .question {
-  background-color: #35BC98;
+  background-color: #37FF8B;
   color: black;
   padding: 10px;
   min-height: 60px;
@@ -24,6 +25,45 @@ div {
   font-size: 24px;
 }
 
+.question {
+  --green: #1BFD9C;
+  font-size: 15px;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+  color: var(--green);
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+ }
+ 
+ .question:hover {
+  color: #82ffc9;
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+ }
+ 
+ .question:before {
+  content: "";
+  position: absolute;
+  left: -4em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform .4s ease-in-out;
+  background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
+ }
+ 
+.question:hover:before {
+  transform: translateX(15em);
+ }
+
+/* css question fim */
+
 .results {
   background-color: #fff;
   height: 300px;
@@ -31,7 +71,7 @@ div {
 }
 
 .congratulations {
-  background-color: #35BC98;
+  background-color: #37FF8B;
   padding: 20px;
   font-size: 36px;
   color: #fff;
@@ -58,16 +98,21 @@ div {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 50px;
+  margin-bottom: 7%;
 }
 
 .answer-letter {
-  font-size: 30px;
-  background-color: #35BC98;
+  font-size: 10px;
+  background-color: #e8fff1;
   color: #fff;
-  width: 70px;
+  border-radius: 50%;
+  width: 30px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+
 }
 
 .answer-text {
@@ -78,11 +123,12 @@ div {
 }
 
 .correct-answer {
-  border: 2px solid #1ea55b;
+  border: 2px solid #37FF8B;
 }
 
 .correct-answer .answer-letter {
-  background: #1ea55b;
+  background: #37FF8B;
+  opacity: 1;
 }
 
 .wrong-answer {
@@ -91,12 +137,13 @@ div {
 
 .wrong-answer .answer-letter {
   background: #dc0a0a;
+  opacity: 1;
 }
 
 .next-button {
   margin: 0 auto;
   color: #fff;
-  background: #BD2121;
+  background: #37FF8B;
   width: 300px;
   font-size: 18px;
   font-weight: 600;
@@ -106,8 +153,57 @@ div {
   text-align: center;
 }
 
+.next-button {
+  background-color: #37FF8B;
+  color: black;
+  padding: 10px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.next-button {
+  --green: #1BFD9C;
+  font-size: 15px;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+  color: var(--green);
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+ }
+ 
+ .next-button:hover {
+  color: #82ffc9;
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+ }
+ 
+ .next-button:before {
+  content: "";
+  position: absolute;
+  left: -4em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform .4s ease-in-out;
+  background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
+ }
+ 
+.next-button:hover:before {
+  transform: translateX(15em);
+ }
+
+
 .score {
-  background: #BD2121;
+  background: #1BFD9C;
   color: #fff;
   font-size: 18px;
   width: 300px;
@@ -120,6 +216,80 @@ div {
   justify-content: center;
 }
 
+.score {
+  --green: #1BFD9C;
+  font-size: 15px;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+  color: var(--green);
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+ }
+
+
 .disabled-answer {
   pointer-events: none;
+}
+
+.iframe{
+  visibility: hidden;
+  bottom: -100%;
+  position: absolute;
+  opacity: 1;
+  width:"1";
+  height:"1";
+  left: -100%;
+}
+
+/* Css answer */
+/* From uiverse.io by @satyamchaudharydev */
+/* === removing default button style ===*/
+.answer {
+  margin: 0;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
+.answer {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #37FF8B;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  opacity: 0;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.answer:hover .hover-text {
+  opacity: 1;
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
 }

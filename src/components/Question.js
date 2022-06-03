@@ -5,16 +5,11 @@ import { QuizContext } from "../contexts/quiz";
 const Question = () => {
   const [quizState, dispatch] = useContext(QuizContext);
   const currentQuestion = quizState.questions[quizState.currentQuestionIndex];
+  const hidden = "hidden"
   return (
     <div>
       <div className="question">{currentQuestion.question}</div>
       
-      <iframe src={currentQuestion.mp3} allow="autoplay" id="iframeAudio">
-
-      </iframe> 
-      <audio autoplay loop  id="playAudio">
-          <source src={currentQuestion.mp3}/>
-        </audio>
       <div className="answers">
         {quizState.answers.map((answer, index) => (
           <Answer
@@ -29,7 +24,10 @@ const Question = () => {
           />
         ))}
       </div>
+      <iframe src={currentQuestion.mp3} allow="autoplay" id="iframeAudio" className="iframe" >
+      </iframe>
     </div>
+
   );
 };
 
