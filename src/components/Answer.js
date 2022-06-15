@@ -18,7 +18,8 @@ const Answer = ({
       onClick={() => onSelectAnswer(answerText)}
     >
       <div className="answer-letter">{letterMapping[index]}</div>
-      <div className="answer-text">{answerText}</div>
+      <span className="answer-text">{answerText}</span>
+      <span className="hover-text" aria-hidden="true">{answerText}</span>
     </div>
   );
 };
