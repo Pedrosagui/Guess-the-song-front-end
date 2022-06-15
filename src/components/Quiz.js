@@ -5,7 +5,7 @@ import { QuizContext } from "../contexts/quiz";
 const Quiz = () => {
   const [quizState, dispatch] = useContext(QuizContext);
   const apiUrl =
-    "http://localhost:8080/api/quiz/v1/Labrinth";
+    "http://localhost:8080/api/quiz/v1/WORLD";
   useEffect(() => {
     if (quizState.questions.length > 0) {
       return;
