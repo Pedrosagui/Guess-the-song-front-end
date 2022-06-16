@@ -1,11 +1,11 @@
 import Answer from "./Answer";
 import { useContext } from "react";
 import { QuizContext } from "../contexts/quiz";
+import ReactAudioPlayer from 'react-audio-player';
 
 const Question = () => {
   const [quizState, dispatch] = useContext(QuizContext);
   const currentQuestion = quizState.questions[quizState.currentQuestionIndex];
-  const hidden = "hidden"
   return (
     <div>
       <div className="question">{currentQuestion.question}</div>
@@ -24,8 +24,12 @@ const Question = () => {
           />
         ))}
       </div>
-      <iframe src={currentQuestion.mp3} allow="autoplay" id="iframeAudio" className="iframe" >
-      </iframe>
+      <ReactAudioPlayer
+      src= {currentQuestion.mp3}
+      autoPlay="true"
+      volume="0.2"
+      controls
+      />
     </div>
 
   );
